@@ -67,18 +67,18 @@ class MaxSetCoverQBF:
 
         model.update()
 
-        # Set cover constraints
-        u = set(range(1, n + 1))
-        for k in u:
-            expr = quicksum(x[i] for i in range(n) if k in self.subsets[i])
-            model.addConstr(expr >= 1, name=f"cover_{k}")
-
         # Linearization constraints
         for i in range(n):
             for j in range(i + 1, n):
                 model.addConstr(y[i, j] <= x[i])
                 model.addConstr(y[i, j] <= x[j])
                 model.addConstr(y[i, j] >= x[i] + x[j] - 1)
+
+        # Set cover constraints
+        u = set(range(1, n + 1))
+        for k in u:
+            expr = quicksum(x[i] for i in range(n) if k in self.subsets[i])
+            model.addConstr(expr >= 1, name=f"cover_{k}")
 
         # Objective function
         obj = 0
