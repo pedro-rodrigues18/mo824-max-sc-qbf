@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "mo824-max-sc-qbf"
+version = "0.1.0"
+description = ""
+authors = ["pedro-rodrigues18 <hrpereira.pedro@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^2.3.2"
+
+[tool.pyrefly]
+project-includes = ["**/*"]
+project-excludes = ["**/*venv/**/*"]
+
+
+[tool.poetry.group.dev.dependencies]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
