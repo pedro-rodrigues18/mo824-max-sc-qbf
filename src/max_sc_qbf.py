@@ -94,7 +94,7 @@ class MaxSetCoverQBF:
         if model.status == GRB.OPTIMAL:
             print("Optimal solution found:")
             for i in range(n):
-                print(f"x[{i}] = {x[i].X}")
+                print(f"x[{i+1}] = {x[i].X}")
             # Selected subsets
             selected_subsets = [i + 1 for i in range(n) if x[i].X > 0.5]
             print(f"Selected subsets: {selected_subsets}")
