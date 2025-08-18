@@ -8,11 +8,18 @@ from src.max_sc_qbf import MaxSetCoverQBF
 
 def main() -> None:
     # Read input data
-    path = "input/example-02.txt"
+    path = "input/"
 
-    msc_qbf = MaxSetCoverQBF(path)
-
-    msc_qbf.solve()
+    # Solve MSC-QBF for each instance
+    for i in range(1, 16):
+        instance = f"instance-{i:02d}.txt"
+        full_path = Path(path) / instance
+        print(full_path)
+        if not full_path.exists():
+            print(f"Instance {instance} does not exist.")
+            continue
+        msc_qbf = MaxSetCoverQBF(full_path)
+        msc_qbf.solve(instance)
 
 
 if __name__ == "__main__":

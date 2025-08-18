@@ -49,8 +49,10 @@ class MaxSetCoverQBF:
             coeffs = list(map(float, line.split()))
             self.coefficients.append(coeffs)
 
-    def solve(self) -> None:
+    def solve(self, full_path) -> None:
         model = Model("MaxSetCoverQBF")
+        model.setParam("TimeLimit", 900)
+        model.setParam("LogFile", f"logs/{full_path}")
 
         n = len(self.subsets)
 
