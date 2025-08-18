@@ -14,12 +14,11 @@ def main() -> None:
     for i in range(1, 16):
         instance = f"instance-{i:02d}.txt"
         full_path = Path(path) / instance
-        print(full_path)
-        if not full_path.exists():
-            print(f"Instance {instance} does not exist.")
-            continue
-        msc_qbf = MaxSetCoverQBF(full_path)
-        msc_qbf.solve(instance)
+        if full_path.exists():
+            msc_qbf = MaxSetCoverQBF(full_path)
+            msc_qbf.solve(instance)
+        else:
+            print(f"{instance} does not exist.")
 
 
 if __name__ == "__main__":
