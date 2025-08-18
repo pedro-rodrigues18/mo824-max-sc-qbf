@@ -1,0 +1,92 @@
+
+Gurobi 12.0.3 (linux64) logging started Mon Aug 18 03:13:17 2025
+
+Set parameter LogFile to value "logs/instance-15.txt"
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (linux64 - "Ubuntu 24.04.3 LTS")
+
+CPU model: Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Non-default parameters:
+TimeLimit  900
+
+Optimize a model with 239800 rows, 80200 columns and 643295 nonzeros
+Model fingerprint: 0x01c24d21
+Variable types: 79800 continuous, 400 integer (400 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective -4854.000000
+Found heuristic solution: objective 2.0000000
+Presolve removed 125722 rows and 3716 columns
+Presolve time: 2.31s
+Presolved: 114078 rows, 76484 columns, 350541 nonzeros
+Variable types: 76084 continuous, 400 integer (400 binary)
+Found heuristic solution: objective 140.0000000
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing primal log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   44026    1.3141671e+02   0.000000e+00   3.775790e+05      5s
+   46216    1.0336363e+05   0.000000e+00   4.630632e+06     10s
+   47176    1.0336520e+05   0.000000e+00   3.378269e+06     15s
+   48136    1.0336611e+05   0.000000e+00   1.596119e+06     21s
+   48976    1.0336693e+05   0.000000e+00   4.670831e+06     25s
+   49936    1.0336770e+05   0.000000e+00   4.205055e+06     30s
+   50776    1.0336892e+05   0.000000e+00   3.623591e+06     35s
+   51616    1.0337005e+05   0.000000e+00   2.815567e+06     40s
+   52576    1.0337196e+05   0.000000e+00   3.257502e+06     46s
+   53416    1.0337417e+05   0.000000e+00   4.317623e+06     51s
+   54136    1.0337825e+05   0.000000e+00   1.345016e+06     55s
+   54976    1.0338019e+05   0.000000e+00   1.343181e+06     60s
+   55816    1.0338065e+05   0.000000e+00   1.263038e+06     65s
+Concurrent spin time: 0.00s
+
+Solved with dual simplex
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   66302    1.0338600e+05   0.000000e+00   0.000000e+00     69s
+
+Root relaxation: objective 1.033860e+05, 66302 iterations, 66.27 seconds (32.60 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 103386.000    0  400  140.00000 103386.000      -     -   72s
+H    0     0                    2614.0000000 102849.000  3835%     -  101s
+     0     0 101105.500    0  400 2614.00000 101105.500  3768%     -  123s
+     0     0 100688.759    0  400 2614.00000 100688.759  3752%     -  136s
+     0     0 99985.2500    0  400 2614.00000 99985.2500  3725%     -  145s
+     0     0 99682.7500    0  400 2614.00000 99682.7500  3713%     -  150s
+     0     0 99316.7500    0  400 2614.00000 99316.7500  3699%     -  154s
+     0     0 99210.5000    0  400 2614.00000 99210.5000  3695%     -  160s
+     0     0 98276.1250    0  400 2614.00000 98276.1250  3660%     -  179s
+     0     0 96297.8085    0  400 2614.00000 96297.8085  3584%     -  278s
+     0     0 95479.8552    0  400 2614.00000 95479.8552  3553%     -  373s
+     0     0 95452.1667    0  400 2614.00000 95452.1667  3552%     -  385s
+     0     0 95450.6667    0  400 2614.00000 95450.6667  3552%     -  386s
+H    0     0                    2848.0000000 93434.2181  3181%     -  674s
+     0     0 93434.2181    0  400 2848.00000 93434.2181  3181%     -  674s
+     0     0          -    0      2848.00000 93434.1306  3181%     -  900s
+
+Cutting planes:
+  Gomory: 5
+  MIR: 1693
+  Flow cover: 1548
+  RLT: 7013
+  BQP: 27475
+
+Explored 1 nodes (149069 simplex iterations) in 900.07 seconds (310.05 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 2848 2614 140 ... -4854
+
+Time limit reached
+Best objective 2.848000000000e+03, best bound 9.343400000000e+04, gap 3180.6882%
