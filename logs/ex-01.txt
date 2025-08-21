@@ -49,9 +49,9 @@ Solution count 5: 354 345 324 ... 177
 Optimal solution found (tolerance 1.00e-04)
 Best objective 3.540000000000e+02, best bound 3.540000000000e+02, gap 0.0000%
 
-Gurobi 12.0.3 (linux64) logging started Thu Aug 21 10:33:25 2025
+Gurobi 12.0.3 (linux64) logging started Thu Aug 21 10:32:08 2025
 
-Set parameter LogFile to value "logs/instance-01.txt"
+Set parameter LogFile to value "logs/ex-01.txt"
 Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (linux64 - "Ubuntu 24.04.3 LTS")
 
 CPU model: Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz, instruction set [SSE2|AVX|AVX2]
@@ -91,7 +91,7 @@ Cutting planes:
   RLT: 165
   BQP: 168
 
-Explored 1 nodes (272 simplex iterations) in 0.09 seconds (0.05 work units)
+Explored 1 nodes (272 simplex iterations) in 0.11 seconds (0.05 work units)
 Thread count was 8 (of 8 available processors)
 
 Solution count 5: 354 345 324 ... 177

@@ -51,7 +51,7 @@ class MaxSetCoverQBF:
 
     def solve(self, full_path) -> None:
         model = Model("MaxSetCoverQBF")
-        model.setParam("TimeLimit", 900)
+        model.setParam("TimeLimit", 600)
         model.setParam("LogFile", f"logs/{full_path}")
 
         n = len(self.subsets)
