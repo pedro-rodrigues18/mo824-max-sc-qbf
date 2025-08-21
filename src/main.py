@@ -8,6 +8,7 @@ from src.max_sc_qbf import MaxSetCoverQBF
 
 def main() -> None:
     debug = False  # Set to True for debugging
+    instance_name = "ex-01.txt"  # Example instance for debugging
 
     # Read input data
     path = "input/"
@@ -24,13 +25,12 @@ def main() -> None:
                 print(f"{instance} does not exist.")
     else:
         # Debugging mode: solve a specific instance
-        instance = "ex-01.txt"
-        full_path = Path(path) / instance
+        full_path = Path(path) / instance_name
         if full_path.exists():
             msc_qbf = MaxSetCoverQBF(full_path)
-            msc_qbf.solve(instance)
+            msc_qbf.solve(instance_name)
         else:
-            print(f"{instance} does not exist.")
+            print(f"{instance_name} does not exist.")
 
 
 if __name__ == "__main__":
