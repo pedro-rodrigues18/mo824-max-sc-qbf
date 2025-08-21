@@ -63,9 +63,7 @@ class MaxSetCoverQBF:
         y = {}
         for i in range(n):
             for j in range(i + 1, n):
-                y[i, j] = model.addVar(
-                    vtype=GRB.CONTINUOUS, lb=0, ub=1, name=f"y[{i},{j}]"
-                )
+                y[i, j] = model.addVar(vtype=GRB.BINARY, name=f"y[{i},{j}]")
 
         model.update()
 
